@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-powershell-pod
+  labels:
+    azure.workload.identity/use: "true"
+spec:
+  serviceAccountName: workload-identity-service-account
+  containers:
+  - name: my-powershell-container
+    image: askworkloadidentity.azurecr.io/ask-workload-identity-test-image:latest
+    command: [ "pwsh", "-command", "./my-script.ps1" ]
+    
+  restartPolicy: Never
