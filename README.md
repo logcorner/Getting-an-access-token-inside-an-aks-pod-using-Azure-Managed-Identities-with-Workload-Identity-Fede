@@ -1,0 +1,1 @@
+# Getting-an-access-token-inside-an-aks-pod-using-Azure-Managed-Identities-with-Workload-Identity-Fede
